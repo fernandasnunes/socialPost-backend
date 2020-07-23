@@ -1,0 +1,26 @@
+{
+  "name": "challengesocialpost-backend",
+  "version": "1.0.0",
+  "description": "Challenge Social Post Backend ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandasnunes/challengesocialPost-backend.git"
+  },
+  "author": "Fernanda Nunes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandasnunes/challengesocialPost-backend/issues"
+  },
+  "homepage": "https://github.com/fernandasnunes/challengesocialPost-backend#readme",
+  "dependencies": {
+    "cfenv": "^1.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.25"
+  }
+}
