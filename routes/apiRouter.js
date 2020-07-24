@@ -9,7 +9,7 @@ usersRouters.post('/', (async (req, res, next) => {
         let result = await controller.registerUser(req.body.name, req.body.age, req.body.email).catch(err => { throw new Error(err) })
         res.status(200).send({
             message: 'Usuário cadastrado com sucesso',
-            data: {
+            result: {
                 id: result._id,
                 name: result.name,
                 age: result.age,
