@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
 
+const uri = process.env.MONGO_URL
+
+
 async function mongoConnect() {
   try {
     mongoose.connect(
-      "mongodb+srv://dbUser:3A0YO1fKLDkVmhcz@cluster0-bi5e4.mongodb.net/dbUsers?retryWrites=true&w=majority",
+      uri,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
