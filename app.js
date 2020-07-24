@@ -10,7 +10,8 @@ const app = express()
 const appEnv = cfenv.getAppEnv()
 
 //Import route files
-// const apiRouter = require('./routes/apiRouter')
+const usersRouters = require('./routes/apiRouter')
+const rootRoutes = require("./routes/rootRoutes");
 
 
 //Import connector files
@@ -23,11 +24,11 @@ app.use(express.json())
 app.use(cors())
 
 //DB connection
- mongoConnector.mongoConnect()
-// cosConnector.cosConnect()
+mongoConnector.mongoConnect()
 
 //Define the route files here
-// app.use('/', apiRouter)
+app.use('/api/auth', usersRouters)
+app.use("/api/root", rootRoutes)
 
 
 //Error middleware
